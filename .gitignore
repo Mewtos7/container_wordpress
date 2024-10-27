@@ -1,0 +1,6 @@
+#####Gitignore#######
+
+#terraform
+.terraform*
+*local.terraform.tfvars
+*.tfstate*
