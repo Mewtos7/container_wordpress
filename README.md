@@ -1,5 +1,7 @@
 # Description
-Wordpress CMS Deployment with Terraform on remoite server with mysql database
+Wordpress CMS Deployment with Terraform on remote server with mysql database.
+
+See [Docker Hub mewtos7/wpstandalone](https://hub.docker.com/repository/docker/mewtos7/wpstandalone/general) for docker image
 
 # Features planned
 - Using GitHub workflow:
@@ -8,7 +10,7 @@ Wordpress CMS Deployment with Terraform on remoite server with mysql database
     - Configure DNS after deployment as soon as Ip is available
     - Certbot action to validate domain names
 
-# Deployment instrcutions
+# Deployment instructions
 ## Hetzner: Manual deployment with powershell
 Manual deployment with powershell script
 1. Set environment variable **hcloud_token** and  **SSH_PUBLIC_KEY**
