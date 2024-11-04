@@ -2,4 +2,3 @@
 # DO NOT PROVIDE API TOKEN HERE!
 location = "nbg1"
 env      = "dev"
-fqdn     = "test.test.test"

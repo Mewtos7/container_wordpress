@@ -12,4 +12,5 @@ Wordpress CMS Deployment with Terraform on remoite server with mysql database
 Manual deployment with powershell script
 1. Set environment variable **hcloud_token**
 2. cd into repository root
-3. Do ```common/iac_local_deployment.ps1```
+3. Edit ```src/hetzner/terraform.tfvars ``` to your needs
+4. Do ```common/iac_local_deployment.ps1```
