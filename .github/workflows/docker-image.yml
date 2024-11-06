@@ -3,8 +3,13 @@ name: Docker Image CI
 on:
   push:
     branches: [ "main" ]
+    paths:
+    - src/docker/wordpress_standalone/**
   pull_request:
     branches: [ "main" ]
+    paths:
+    - src/docker/wordpress_standalone/**
+  workflow_dispatch:
 
 jobs:
   build:
@@ -16,4 +21,6 @@ jobs:
     - name: Publish the Docker Image
       run: |
        echo "${{ secrets.DOCKERHUB_PAT }}" | docker login --username ${{ secrets.DOCKERHUB_USERNAME }} --password-stdin
+       docker push ${{ secrets.DOCKERHUB_USERNAME }}/wpstandalone:$(date +%s)
+
 
