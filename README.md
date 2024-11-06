@@ -30,8 +30,8 @@ wwwmount="$uniqueKey-wp-www"
 ```
 2. Create image
 ```bash
-docker build -t my-username/my-image -f src/docker/wordpress_standalone/wpstandalone.dockerfile .
-docker run -p 80:80 -v $wwwmount:/var/www -v $mysqlmount:/var/lib/mysql my-username/my-image
+docker build -t my-username/my-image -f src/docker/wordpress_standalone/wpstandalone.dockerfile src/docker/wordpress_standalone/
+docker run -p 80:80 -v $wwwmount:/srv/www -v $mysqlmount:/var/lib/mysql my-username/my-image
 ```
 
 # Open topics
