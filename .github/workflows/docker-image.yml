@@ -15,5 +15,5 @@ jobs:
       run: docker build --tag ${{ secrets.DOCKERHUB_USERNAME }}/wpstandalone:$(date +%s) --file src/docker/wordpress_standalone/wpstandalone.dockerfile .
     - name: Publish the Docker Image
       run: |
-       ${{ secrets.DOCKERHUB_PAT }} | docker login --username ${{ secrets.DOCKERHUB_USERNAME }} --password-stdin
+       echo "${{ secrets.DOCKERHUB_PAT }}" | docker login --username ${{ secrets.DOCKERHUB_USERNAME }} --password-stdin
 
