@@ -17,7 +17,7 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - name: Build the Docker image
-      run: docker build --tag ${{ secrets.DOCKERHUB_USERNAME }}/wpstandalone:latest --file src/docker/wordpress_standalone/wpstandalone.dockerfile .
+      run: docker build --tag ${{ secrets.DOCKERHUB_USERNAME }}/wpstandalone:latest --file src/docker/wordpress_standalone/wpstandalone.dockerfile src/docker/wordpress_standalone/
     - name: Publish the Docker Image
       run: |
        echo "${{ secrets.DOCKERHUB_PAT }}" | docker login --username ${{ secrets.DOCKERHUB_USERNAME }} --password-stdin
