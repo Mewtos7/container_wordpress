@@ -1,4 +1,5 @@
 #!/bin/bash
+apt-get update && apt-get upgrade -y
 if [ -d "/srv/www/wordpress" ]; then
     echo "/srv/www/wordpress does exist."
 else
