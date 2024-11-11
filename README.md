@@ -31,7 +31,17 @@ wwwmount="$uniqueKey-wp-www"
 2. Create image
 ```bash
 docker build -t my-username/my-image -f src/docker/wordpress_standalone/wpstandalone.dockerfile src/docker/wordpress_standalone/
+```
+
+3. Run Image without domain
+```bash
 docker run -p 80:80 -v $wwwmount:/srv/www -v $mysqlmount:/var/lib/mysql my-username/my-image
+```
+
+3. Run Image with domain and ssl
+Therefore, you need to create a DNS-Record (A or AAA) for www.yourdaomain and yourdomain
+```bash
+docker run -p 80:80 -p 443:443 -v $wwwmount:/srv/www -v $mysqlmount:/var/lib/mysql my-username/my-image -e DOMAIN='test.com' -e MAIL='testmail@test.com' wpiacdeploy
 ```
 
 # Open topics
