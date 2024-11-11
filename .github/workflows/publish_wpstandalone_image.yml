@@ -18,5 +18,3 @@ jobs:
       run: |
        echo "${{ secrets.DOCKERHUB_PAT }}" | docker login --username ${{ secrets.DOCKERHUB_USERNAME }} --password-stdin
        docker push ${{ secrets.DOCKERHUB_USERNAME }}/wpstandalone:latest
-
-

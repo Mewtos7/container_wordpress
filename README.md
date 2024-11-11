@@ -41,11 +41,9 @@ docker run -p 80:80 -v $wwwmount:/srv/www -v $mysqlmount:/var/lib/mysql my-usern
 3. Run Image with domain and ssl
 Therefore, you need to create a DNS-Record (A or AAA) for www.yourdaomain and yourdomain
 ```bash
-docker run -p 80:80 -p 443:443 -v $wwwmount:/srv/www -v $mysqlmount:/var/lib/mysql my-username/my-image -e DOMAIN='test.com' -e MAIL='testmail@test.com' wpiacdeploy
+docker run -p 80:80 -p 443:443 -v $wwwmount:/srv/www -v $mysqlmount:/var/lib/mysql -e DOMAIN='test.com' -e MAIL='testmail@test.com' my-username/my-image
 ```
 
 # Open topics
-- (fix)Localization missing after container destroy
-- (Add) certbot to container as option, when fqdn is added
 - (Add) Workflow for hetzner server creation (included tf destroy)
-- (Add) Workflow for container creation & registry push (included tf destroy)
+- (Add) Container tests for startup
