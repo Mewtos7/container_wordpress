@@ -17,7 +17,10 @@ php-json \
 php-mbstring \
 php-mysql \
 php-xml \
-php-zip
+php-zip \
+certbot \
+python3-certbot-apache
 COPY apache_wp.sh /var/tmp/apache_wp.sh
 COPY apache.conf /etc/apache2/sites-available/wordpress.conf
+COPY apache_domain.conf /etc/apache2/sites-available/wordpress_domain.conf
 ENTRYPOINT ["/var/tmp/apache_wp.sh"]
