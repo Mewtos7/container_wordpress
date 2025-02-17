@@ -19,7 +19,8 @@ php-mysql \
 php-xml \
 php-zip \
 certbot \
-python3-certbot-apache
+python3-certbot-apache \
+cron
 COPY apache_wp.sh /var/tmp/apache_wp.sh
 COPY apache.conf /etc/apache2/sites-available/wordpress.conf
 COPY apache_domain.conf /etc/apache2/sites-available/wordpress_domain.conf

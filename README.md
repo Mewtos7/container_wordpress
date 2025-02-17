@@ -39,10 +39,11 @@ docker run -p 80:80 -v $wwwmount:/srv/www -v $mysqlmount:/var/lib/mysql my-usern
 ```
 
 3. Run Image with domain and ssl
-Therefore, you need to create a DNS-Record (A or AAA) for www.yourdaomain and yourdomain
+Therefore, you need to create a DNS-Record (A or AAA) for www.yourdomain and yourdomain
 ```bash
-docker run -p 80:80 -p 443:443 -v $wwwmount:/srv/www -v $mysqlmount:/var/lib/mysql -e DOMAIN='test.com' -e MAIL='testmail@test.com' my-username/my-image
+docker run -p 80:80 -p 443:443 -v $wwwmount:/srv/www -v $mysqlmount:/var/lib/mysql -e DOMAIN='test.com' -e MAIL='testmail@test.com' my-username/my-image --restart always
 ```
+
 
 # Open topics
 - (Add) Workflow for hetzner server creation (included tf destroy)
